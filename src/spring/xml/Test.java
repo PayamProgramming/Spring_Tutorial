@@ -1,5 +1,6 @@
 package spring.xml;
 
+import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -7,7 +8,12 @@ public class Test {
 
     public static void main(String[] args) {
 
-        ApplicationContext ctx = new ClassPathXmlApplicationContext("Spring.xml");
+        ApplicationContext ctx = null;
+        try {
+            ctx = new ClassPathXmlApplicationContext("Spring.xml");
+        } catch (BeansException e) {
+            e.printStackTrace();
+        }
         Member m = (Member) ctx.getBean("memberid");
         // m.setName("a");
         m.setFamily("33");

@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Spring-Tutorial">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/dist/Spring-Tutorial.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
